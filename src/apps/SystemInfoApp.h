@@ -3,7 +3,7 @@
 
 class SystemInfoApp : public IApp {
 public:
-    SystemInfoApp() : IApp("System Info") { defaultPos = ImVec2(140, 90); }
+    SystemInfoApp() : IApp("System Info", "sysinfo.png") { defaultPos = ImVec2(140, 90); }
 
 protected:
     void drawContents() override {

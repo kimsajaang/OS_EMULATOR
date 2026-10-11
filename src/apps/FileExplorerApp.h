@@ -3,7 +3,7 @@
 
 class FileExplorerApp : public IApp {
 public:
-    FileExplorerApp() : IApp("File Explorer") { defaultPos = ImVec2(100, 70); }
+    FileExplorerApp() : IApp("File Explorer", "folder.png") { defaultPos = ImVec2(100, 70); }
 
 protected:
     void drawContents() override {

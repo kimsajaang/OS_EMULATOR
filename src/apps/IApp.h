@@ -1,12 +1,18 @@
 #pragma once
 #include "imgui.h"
+#include "../Texture.h"
 #include <string>
 #include <utility>
 
 // Base class for every window the "OS" can open.
 class IApp {
 public:
-    explicit IApp(std::string windowTitle) : title(std::move(windowTitle)) {}
+    explicit IApp(std::string windowTitle, std::string iconFilename = "")
+        : title(std::move(windowTitle)) {
+        if (!iconFilename.empty()) {
+            icon = loadTexture(iconFilename);
+        }
+    }
     virtual ~IApp() = default;
 
     void render() {
@@ -20,6 +26,7 @@ public:
 
     bool isOpen = false;
     std::string title;
+    Texture icon;
 
 protected:
     virtual void drawContents() = 0;

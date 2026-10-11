@@ -5,7 +5,7 @@
 
 class TaskManagerApp : public IApp {
 public:
-    TaskManagerApp() : IApp("Task Manager") {
+    TaskManagerApp() : IApp("Task Manager", "taskmgr.png") {
         defaultPos = ImVec2(180, 110);
         defaultSize = ImVec2(560, 380);
     }
