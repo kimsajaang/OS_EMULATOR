@@ -55,7 +55,7 @@ inline void render(GLFWwindow* window, float durationSeconds = 3.0f) {
         drawCentered(drawList, "Welcome to CSOPESY OS Emulator!",
                      displaySize.y * 0.38f, 18.0f, green);
         drawCentered(drawList,
-                     "Group developer: Fabregas, Matthew M. | Ibanez, Kane Joshua T. | Li, Bowen | Teoxon, Jat R.",
+                     "Group developer: Fabregas, Matthew M. | Ibanez, Kane Joshua T. | Li, Bowen | Teoxon, John R.",
                      displaySize.y * 0.47f, 14.0f, white);
 
         int dotCount = static_cast<int>(elapsed * 2.0f) % 4;
