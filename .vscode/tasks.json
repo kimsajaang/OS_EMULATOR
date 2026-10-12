@@ -4,19 +4,10 @@
         {
             "label": "Build CSOPESY OS",
             "type": "shell",
-            "command": "cmake",
-            "args": [
-                "--build",
-                "${workspaceFolder}/build"
-            ],
+            "command": "${workspaceFolder}\\build.bat",
             "group": {
                 "kind": "build",
                 "isDefault": true
-            },
-            "options": {
-                "env": {
-                    "PATH": "C:\\mingw64\\bin;${env:PATH}"
-                }
             },
             "problemMatcher": [
                 "$gcc"
