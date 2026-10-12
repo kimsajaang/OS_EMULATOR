@@ -1,0 +1,5 @@
+# CSOPESY OS parameters - edit these, no recompiling needed
+window_width=1280
+window_height=720
+taskbar_height=48
+clock_format=%A, %b %d, %Y | %I:%M %p

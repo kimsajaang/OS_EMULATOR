@@ -12,7 +12,8 @@ struct Config {
     // levels up (covers running from build/ or build/Debug/).
     static Config load() {
         static const char* paths[] = {
-            "config/config.ini", "../config/config.ini",
+            "config.txt", "config/config.txt", "../config.txt", "../config/config.txt",
+            "config/config.ini", "config.ini", "../config/config.ini",
             "../../config/config.ini", "../../../config/config.ini"
         };
         Config cfg;
@@ -42,8 +43,8 @@ private:
 
     void apply(const std::string& key, const std::string& val) {
         try {
-            if (key == "window_width") windowWidth = std::stoi(val);
-            else if (key == "window_height") windowHeight = std::stoi(val);
+            if (key == "window_width" || key == "width" || key == "screen_width") windowWidth = std::stoi(val);
+            else if (key == "window_height" || key == "height" || key == "screen_height") windowHeight = std::stoi(val);
             else if (key == "taskbar_height") taskbarHeight = std::stof(val);
             else if (key == "clock_format") clockFormat = val;
         } catch (...) { /* bad value: keep the default */ }
